@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人作品集</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">作品集</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">作品集</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ai-recognition">AI辨識</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">聯絡方式</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container mt-3 text-center">
+    <img src="attached_assets/image_1744771698307.png" alt="Personal Photo" class="profile-image">
+  </div>
+
+  <main class="container mt-5">
+    <section id="about" class="section py-5">
+      <h1>關於我</h1>
+      <p>
+        黃絜琳<br>
+        學生<br>
+        就讀學校: 臺灣科技大學<br>
+        科系: 企業管理學系<br>
+        年級: 大三
+      </p>
+    </section>
+
+    <section id="projects" class="section py-5">
+      <h2>作品集</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="card-title">作品 1：人工智慧應用實作</h3>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <img src="attached_assets/image_1744772437923.png" alt="AI Project 1" class="img-fluid mb-3">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <img src="attached_assets/image_1744772470317.png" alt="AI Project 2" class="img-fluid mb-3">
+                </div>
+              </div>
+              <p class="card-text">
+                在這個專案中，我深入研究並實踐了AI的基本概念與技術。主要包含：<br><br>
+                
+                1. 機器學習模型訓練與應用<br>
+                2. 影像辨識與處理技術<br>
+                3. AI模型的實際部署與應用<br><br>
+                
+                透過這個專案，我成功將AI理論知識轉化為實際應用，展現了人工智慧在現代技術領域的強大潛力。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="card-title">作品 2：大數據與程式設計導論</h3>
+              <img src="attached_assets/image_1744772926938.png" alt="Big Data Project" class="img-fluid mb-3">
+              <p class="card-text">
+                透過數據驅動創新，建立全方位財富管理與生活金融平台：<br><br>
+                • 整合跨平台數據來源，建立完整客戶旅程視角<br>
+                • 建立客戶全方位資料構架，進行客群細分與行為模型建置<br>
+                • 分析年輕族群在數位平台上的互動行為<br>
+                • 提升品牌認同與互動參與率
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="card-title">作品 3：英文研究報告</h3>
+              <img src="attached_assets/image_1744774898635.png" alt="Sleep Research" class="img-fluid mb-3">
+              <p class="card-text">
+                <strong>Why Checking the Time at Night Could Be Harming Your Sleep</strong><br><br>
+                A research paper exploring the negative effects of checking time during the night on sleep quality and patterns. This study investigates how this common habit might be disrupting our natural sleep cycle and offers insights into better sleep habits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-recognition" class="section py-5">
+      <h2>AI 影像辨識</h2>
+      <div class="card">
+        <div class="card-body text-center">
+          <h3 class="card-title">Teachable Machine 即時辨識</h3>
+          <div class="mb-3">
+            <button type="button" id="startButton" class="btn btn-primary mb-2">開始辨識</button>
+            <div><canvas id="canvas"></div>
+            <div id="label-container"></div>
+          </div>
+          <p class="card-text">
+            使用Teachable Machine建立的影像分類模型，可以透過攝像頭即時辨識影像。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section py-5">
+      <h2>聯絡方式</h2>
+      <p>
+        身份: 學生<br>
+        電話: 0986025516<br>
+        E-mail: B11108064@ntust.edu.tw
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 黃絜琳</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
