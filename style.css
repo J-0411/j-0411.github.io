@@ -1,0 +1,57 @@
+
+body {
+  background-color: #fff7e6;
+  color: #5c4d3c;
+  font-family: "Microsoft JhengHei", sans-serif;
+}
+
+header, footer {
+  background-color: #ffeb99;
+  color: #5c4d3c;
+  padding: 1rem 0;
+}
+
+h1, h2, h3 {
+  color: #b38600;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+  color: #b38600;
+}
+
+.profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.card {
+  border: 1px solid #ffeb99;
+  background-color: #fffbf0;
+}
+
+.card-title {
+  color: #b38600;
+}
+
+.card-text {
+  color: #5c4d3c;
+}
+
+button {
+  background-color: #ffdb4d;
+  color: #5c4d3c;
+  border: none;
+}
+
+button:hover {
+  background-color: #ffd11a;
+}
+
+
+.section#about {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
