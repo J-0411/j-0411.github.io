@@ -1,140 +1,219 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>個人作品集</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #fff8e1;
+      font-family: "Noto Sans TC", sans-serif;
+      color: #5a4b32;
+    }
+    .navbar {
+      background-color: #fff3cd;
+      box-shadow: 0 2px 8px rgba(90, 75, 50, 0.2);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #7b5e19;
+    }
+    .nav-link {
+      color: #7b5e19 !important;
+      font-weight: 600;
+      margin-left: 1rem;
+    }
+    .nav-link:hover {
+      color: #d9b310 !important;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+
+    /* ✅ 移除邊框與陰影的個人照片 */
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+    section h1, section h2 {
+      color: #5a4b32;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* ✅ 新版「關於我」區塊 */
+    #about .about-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      background: #fffbe6;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 3px 15px rgba(90, 75, 50, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    #about .about-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: left;
+      color: #5a4b32;
+      line-height: 2.2rem;
+    }
+
+    /* ✅ 作品集字體顏色為咖啡色 */
+    #projects .card {
+      border-radius: 15px;
+      box-shadow: 0 3px 15px rgba(90, 75, 50, 0.1);
+      transition: transform 0.3s ease;
+      background: #fffbe6;
+      color: #5a4b32;
+    }
+    #projects .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(90, 75, 50, 0.2);
+    }
+    #projects .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #5a4b32;
+    }
+    #projects .card-text {
+      color: #5a4b32;
+    }
+
+    #contact .card {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      background: #fffbe6;
+      border-radius: 15px;
+      box-shadow: 0 3px 15px rgba(90, 75, 50, 0.1);
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: #5a4b32;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #7b5e19;
+      color: #fffbe6;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">作品集</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">作品集</a></li>
-            <li class="nav-item"><a class="nav-link" href="#ai-recognition">AI辨識</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">聯絡方式</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <div class="container mt-3 text-center">
-    <img src="attached_assets/image_1744771698307.png" alt="Personal Photo" class="profile-image">
-  </div>
 
+  <!-- ✅ 改版後的「關於我」區塊 -->
   <main class="container mt-5">
     <section id="about" class="section py-5">
-      <h1>關於我</h1>
-      <p>
-        黃絜琳<br>
-        學生<br>
-        就讀學校: 臺灣科技大學<br>
-        科系: 企業管理學系<br>
-        年級: 大三
-      </p>
+      <h1 class="text-center">關於我</h1>
+      <div class="about-container">
+        <img src="attached_assets/image_1744771698307.png" alt="個人照片" class="profile-image" />
+        <div class="about-text">
+          黃絜琳<br />
+          學生<br />
+          就讀學校：臺灣科技大學<br />
+          科系：企業管理學系<br />
+          年級：大三
+        </div>
+      </div>
     </section>
 
     <section id="projects" class="section py-5">
       <h2>作品集</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-body">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
               <h3 class="card-title">作品 1：人工智慧應用實作</h3>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <img src="attached_assets/image_1744772437923.png" alt="AI Project 1" class="img-fluid mb-3">
+              <div class="row mb-3">
+                <div class="col-6">
+                  <img src="attached_assets/image_1744772437923.png" alt="AI Project 1" class="img-fluid rounded" />
                 </div>
-                <div class="col-md-6 mb-3">
-                  <img src="attached_assets/image_1744772470317.png" alt="AI Project 2" class="img-fluid mb-3">
+                <div class="col-6">
+                  <img src="attached_assets/image_1744772470317.png" alt="AI Project 2" class="img-fluid rounded" />
                 </div>
               </div>
-              <p class="card-text">
-                在這個專案中，我深入研究並實踐了AI的基本概念與技術。主要包含：<br><br>
-                
-                1. 機器學習模型訓練與應用<br>
-                2. 影像辨識與處理技術<br>
-                3. AI模型的實際部署與應用<br><br>
-                
+              <p class="card-text flex-grow-1">
+                在這個專案中，我深入研究並實踐了AI的基本概念與技術。主要包含：<br /><br />
+                1. 機器學習模型訓練與應用<br />
+                2. 影像辨識與處理技術<br />
+                3. AI模型的實際部署與應用<br /><br />
                 透過這個專案，我成功將AI理論知識轉化為實際應用，展現了人工智慧在現代技術領域的強大潛力。
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-body">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
               <h3 class="card-title">作品 2：大數據與程式設計導論</h3>
-              <img src="attached_assets/image_1744772926938.png" alt="Big Data Project" class="img-fluid mb-3">
-              <p class="card-text">
-                透過數據驅動創新，建立全方位財富管理與生活金融平台：<br><br>
-                • 整合跨平台數據來源，建立完整客戶旅程視角<br>
-                • 建立客戶全方位資料構架，進行客群細分與行為模型建置<br>
-                • 分析年輕族群在數位平台上的互動行為<br>
+              <img src="attached_assets/image_1744772926938.png" alt="Big Data Project" class="img-fluid rounded mb-3" />
+              <p class="card-text flex-grow-1">
+                透過數據驅動創新，建立全方位財富管理與生活金融平台：<br /><br />
+                • 整合跨平台數據來源，建立完整客戶旅程視角<br />
+                • 建立客戶全方位資料構架，進行客群細分與行為模型建置<br />
+                • 分析年輕族群在數位平台上的互動行為<br />
                 • 提升品牌認同與互動參與率
               </p>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h3 class="card-title">作品 3：英文研究報告</h3>
-              <img src="attached_assets/image_1744774898635.png" alt="Sleep Research" class="img-fluid mb-3">
-              <p class="card-text">
-                <strong>Why Checking the Time at Night Could Be Harming Your Sleep</strong><br><br>
-                A research paper exploring the negative effects of checking time during the night on sleep quality and patterns. This study investigates how this common habit might be disrupting our natural sleep cycle and offers insights into better sleep habits.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="ai-recognition" class="section py-5">
-      <h2>AI 影像辨識</h2>
-      <div class="card">
-        <div class="card-body text-center">
-          <h3 class="card-title">Teachable Machine 即時辨識</h3>
-          <div class="mb-3">
-            <button type="button" id="startButton" class="btn btn-primary mb-2">開始辨識</button>
-            <div><canvas id="canvas"></div>
-            <div id="label-container"></div>
-          </div>
-          <p class="card-text">
-            使用Teachable Machine建立的影像分類模型，可以透過攝像頭即時辨識影像。
-          </p>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section py-5">
       <h2>聯絡方式</h2>
-      <p>
-        身份: 學生<br>
-        電話: 0986025516<br>
-        E-mail: B11108064@ntust.edu.tw
-      </p>
+      <div class="card text-center">
+        <p class="mb-1">📞電話: 0986025516</p>
+        <p class="mb-0">✉️E-mail: B11108064@ntust.edu.tw</p>
+      </div>
     </section>
   </main>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 黃絜琳</p>
+  <footer class="text-center py-3">
+    <p>&copy; 2025 黃絜琳|個人作品集</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
+
