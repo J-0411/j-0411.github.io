@@ -1,4 +1,3 @@
-// Teachable Machine模型URL
 const URL = "https://teachablemachine.withgoogle.com/models/l14ng9OQI/";
 
 let model, webcam, labelContainer, maxPredictions;
@@ -14,7 +13,7 @@ async function init() {
     webcam = new tmImage.Webcam(200, 200, flip);
     await webcam.setup();
     await webcam.play();
-    
+
     window.requestAnimationFrame(loop);
 
     document.getElementById('canvas').appendChild(webcam.canvas);
@@ -39,4 +38,11 @@ async function predict() {
     }
 }
 
-document.getElementById('startButton').addEventListener('click', init);
+document.addEventListener('DOMContentLoaded', () => {
+  const startButton = document.getElementById('startButton');
+  if (startButton) {
+    startButton.addEventListener('click', init);
+  } else {
+    console.error('找不到 startButton 元素');
+  }
+});
