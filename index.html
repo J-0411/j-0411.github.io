@@ -33,8 +33,6 @@
       top: 0;
       z-index: 1030;
     }
-
-    /* ✅ 移除邊框與陰影的個人照片 */
     .profile-image {
       width: 200px;
       height: 200px;
@@ -42,14 +40,11 @@
       border-radius: 50%;
       display: block;
     }
-
     section h1, section h2 {
       color: #5a4b32;
       margin-bottom: 1.5rem;
       font-weight: 700;
     }
-
-    /* ✅ 新版「關於我」區塊 */
     #about .about-container {
       display: flex;
       justify-content: center;
@@ -63,7 +58,6 @@
       margin: 0 auto;
       flex-wrap: wrap;
     }
-
     #about .about-text {
       font-size: 1.5rem;
       font-weight: 600;
@@ -71,8 +65,6 @@
       color: #5a4b32;
       line-height: 2.2rem;
     }
-
-    /* ✅ 作品集字體顏色為咖啡色 */
     #projects .card {
       border-radius: 15px;
       box-shadow: 0 3px 15px rgba(90, 75, 50, 0.1);
@@ -92,7 +84,6 @@
     #projects .card-text {
       color: #5a4b32;
     }
-
     #contact .card {
       max-width: 500px;
       margin: 0 auto;
@@ -105,7 +96,6 @@
       color: #5a4b32;
       text-align: center;
     }
-
     footer {
       background-color: #7b5e19;
       color: #fffbe6;
@@ -118,15 +108,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">作品集</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -140,12 +122,11 @@
     </nav>
   </header>
 
-  <!-- ✅ 改版後的「關於我」區塊 -->
   <main class="container mt-5">
     <section id="about" class="section py-5">
       <h1 class="text-center">關於我</h1>
       <div class="about-container">
-        <img src=" image_1744771698307.png" alt="個人照片" class="profile-image" />
+        <img src="image_1744771698307.png" alt="個人照片" class="profile-image" />
         <div class="about-text">
           黃絜琳<br />
           學生<br />
@@ -163,7 +144,7 @@
           <div class="card h-100">
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">作品 2：大數據與程式設計導論</h3>
-              <img src=" image_1744772926938.png" alt="Big Data Project" class="img-fluid rounded mb-3" />
+              <img src="image_1744772926938.png" alt="Big Data Project" class="img-fluid rounded mb-3" />
               <p class="card-text flex-grow-1">
                 透過數據驅動創新，建立全方位財富管理與生活金融平台：<br /><br />
                 • 整合跨平台數據來源，建立完整客戶旅程視角<br />
@@ -174,6 +155,26 @@
             </div>
           </div>
         </div>
+
+        <!-- ✅ 新增作品 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">作品 3：AI 植物照護小幫手</h3>
+              <video controls class="w-100 rounded mb-3">
+                <source src="作品3.mp4" type="video/mp4">
+                您的瀏覽器不支援影片播放。
+              </video>
+              <p class="card-text flex-grow-1">
+                建立一個 AI 植物照護網站，提供互動式建議與植物紀錄功能：<br /><br />
+                • 根據天氣與溫度提供照護建議<br />
+                • 上傳植物照片並記錄成長過程<br />
+                • 網站風格活潑可愛，強調使用者體驗與互動性
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -193,3 +194,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
